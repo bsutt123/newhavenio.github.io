@@ -2,13 +2,6 @@ _site
 .jekyll-metadata
 .sass-cache
 feed.xml
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-js/bundle.js
-=======
->>>>>>> fixed small issues with webpack config
 node_modules
->>>>>>> initial webpack commit :
 yarn-error.log
 _bower-components
