@@ -2,5 +2,10 @@ _site
 .jekyll-metadata
 .sass-cache
 feed.xml
+<<<<<<< HEAD
+=======
+js/bundle.js
+node_modules
+>>>>>>> initial webpack commit :
 yarn-error.log
 _bower-components
