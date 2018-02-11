@@ -18,5 +18,15 @@ module.exports = {
         }
       }
     ]
+<<<<<<< HEAD
   }
+=======
+  },
+  plugins:[
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
+  ]
+>>>>>>> feature/bundle-js-with-webpack
 }
