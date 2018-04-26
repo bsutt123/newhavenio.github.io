@@ -8,9 +8,9 @@
      "Dan Bernier <danbernier@gmail.com>",
      "Joel Nimety <jnimety@gmail.com>",
      "Josh Santos <josh@omnidapps.com>",
-    "maxx1128 <maxx1128@gmail.com>",
+     "maxx1128 <maxx1128@gmail.com>",
      "Zach Morek <zmorek@gmail.com>"
-  ],
+   ],
   "license": "MIT",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",

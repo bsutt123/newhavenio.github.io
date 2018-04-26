@@ -5,3 +5,4 @@ feed.xml
 node_modules
 yarn-error.log
 _bower-components
+.vagrant
