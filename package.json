@@ -4,19 +4,26 @@
   "main": "index.html",
   "repository": "git@github.com:newhavenio/newhavenio.github.io.git",
   "contributors": [
-     "Brady Sutton <bsutt123@gmail.com>",
-     "Dan Bernier <danbernier@gmail.com>",
-     "Joel Nimety <jnimety@gmail.com>",
-     "Josh Santos <josh@omnidapps.com>",
-     "maxx1128 <maxx1128@gmail.com>",
-     "Zach Morek <zmorek@gmail.com>"
-   ],
+    "Brady Sutton <bsutt123@gmail.com>",
+    "Dan Bernier <danbernier@gmail.com>",
+    "Joel Nimety <jnimety@gmail.com>",
+    "Josh Santos <josh@omnidapps.com>",
+    "maxx1128 <maxx1128@gmail.com>",
+    "Zach Morek <zmorek@gmail.com>"
+  ],
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap-sass": "^3.3.7",
+    "css-loader": "^0.28.11",
     "jquery": "3.2.1",
+    "jsonp": "^0.2.1",
     "modernizr": "3.2.0",
-    "mustache": "^2.3.0"
+    "moment": "^2.22.1",
+    "mustache": "^2.3.0",
+    "vue": "^2.5.16",
+    "vue-loader": "^15.0.2",
+    "vue-template-compiler": "^2.5.16"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -24,12 +31,17 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "bourbon": "^4.2.4",
+    "browser-sync": "^2.23.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "susy": "^2.2.9",
     "webpack": "^3.11.0"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "packit": "webpack --watch",
+    "buildit": "bundle exec jekyll build --watch --incremental",
+    "jekyllfy": "npm run packit & npm run buildit & npm run serve",
+    "serve": "browser-sync start --config browser-sync.js"
   }
 }
