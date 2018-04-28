@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-
+const { VueLoaderPlugin } = require('vue-loader')
 module.exports = {
   entry: "./webpack/entry.js",
   output: {
@@ -16,17 +16,31 @@ module.exports = {
         query: {
           presets: ["react", "es2015"]
         }
+      },
+    ],
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: "vue-loader"
+      },
+      {
+        test: /\.js$/,
+        loader: "babel-loader"
+      },
+      {
+        test: /\.css$/,
+        use:[
+          "vue-style-loader",
+          "css-loader",
+        ],
       }
     ]
-<<<<<<< HEAD
-  }
-=======
   },
   plugins:[
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
-    })
+    }),
+    new VueLoaderPlugin()
   ]
->>>>>>> feature/bundle-js-with-webpack
 }
