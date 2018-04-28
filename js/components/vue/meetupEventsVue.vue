@@ -46,11 +46,28 @@ export default {
       console.log(requestUrl)
       jsonp(requestUrl, null, (err, data) => {
         var rawEvents = data.data;
-        rawEvents.forEach( function(event, index) {
+        var hackNight = "[Everyone] Full Stack Hack Night";
+        var desiredNumberOfHackNights = 4
+        var eventsArray = [];
+
+        rawEvents.reduce( function(acc, event) {
+          if (event.name !== hackNight) {
+            eventsArray.push(event);
+            return acc;
+          } else if ((event.name === hackNight)&&(acc < desiredNumberOfHackNights)){
+            eventsArray.push(event);
+            acc++;
+            return acc;
+          } else {
+            return acc;
+          }
+        }, 0 )
+
+        eventsArray.forEach( function(event, index) {
           let date = moment(event.local_date + " " + event.local_time)
-          rawEvents[index]["parsed_date"] = date.format("LLL");
+          eventsArray[index]["parsed_date"] = date.format("LLL");
         })
-        this.events = rawEvents;
+        this.events = eventsArray;
       })
     },
   },
